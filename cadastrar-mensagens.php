@@ -1,10 +1,7 @@
 <?php 
+    require __DIR__.'/app/conexao/Conexao.php';
 
-    $dsn = "mysql:host=localhost;dbname=BD_Chat";
-    $usuario = "root";
-    $senha = "bancodedados";
-
-    $conexao = new PDO($dsn, $usuario, $senha);
+    $conexao = obterConexao();
 
     $mensagem_do_form = $_GET['campo_mensagem'];
 
